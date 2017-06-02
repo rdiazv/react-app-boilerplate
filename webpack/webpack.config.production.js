@@ -15,6 +15,7 @@ module.exports = new Config().extend(path.resolve('webpack/webpack.config.base.j
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
+                sourceMap: true,
               },
             },
             {
