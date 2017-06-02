@@ -3,6 +3,7 @@ var webpack = require('webpack')
 var Config = require('webpack-config').default
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
+var Dotenv = require('dotenv-webpack')
 
 module.exports = new Config().merge({
   entry: {
@@ -56,6 +57,9 @@ module.exports = new Config().merge({
     }),
     new webpack.NamedChunksPlugin(),
     new webpack.NamedModulesPlugin(),
+    new Dotenv({
+      path: path.resolve('.env'),
+    }),
   ],
   node: {
     fs: 'empty',
