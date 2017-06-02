@@ -9,6 +9,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.js -p",
     "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack.config.js --hot",
+    "profile": "NODE_ENV=production webpack --config webpack/webpack.config.js -p --profile --json > webpack.stats.json",
     "start": "node server.js",
     "test": "jest",
     "test-watch": "jest --watch"
