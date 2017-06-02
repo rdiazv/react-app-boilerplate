@@ -1,11 +1,9 @@
+var Config = require('webpack-config').default
+var environment = require('webpack-config').environment
 var path = require('path')
 
-module.exports = {
-  entry: {
-    app: path.resolve('src/entry.js'),
-  },
-  output: {
-    path: path.resolve('dist'),
-    filename: '[name].js',
-  },
-}
+environment.setAll({
+  env: () => process.env.NODE_ENV
+});
+
+module.exports = new Config().extend(path.resolve('webpack/webpack.config.[env].js'))

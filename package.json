@@ -7,9 +7,11 @@
   "author": "Rodrigo Andrés Díaz Vergara <rdiazv89@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack/webpack.config.js"
+    "build": "NODE_ENV=production webpack --config webpack/webpack.config.js -p",
+    "dev": "NODE_ENV=development webpack --config webpack/webpack.config.js --watch"
   },
   "devDependencies": {
-    "webpack": "2.6.1"
+    "webpack": "2.6.1",
+    "webpack-config": "7.0.0"
   }
 }
