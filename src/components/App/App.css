@@ -1,0 +1,5 @@
+@import 'theme/variables';
+
+.App {
+  color: $primary-color;
+}

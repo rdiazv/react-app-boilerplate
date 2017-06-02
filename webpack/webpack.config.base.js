@@ -5,7 +5,10 @@ var DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 
 module.exports = new Config().merge({
   entry: {
-    app: path.resolve('src/entry.js'),
+    app: [
+      path.resolve('src/theme/entry.css'),
+      path.resolve('src/entry.js'),
+    ],
   },
   output: {
     path: path.resolve('dist'),

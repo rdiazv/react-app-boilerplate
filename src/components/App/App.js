@@ -1,6 +1,9 @@
 import React from 'react'
+import './App.css'
 
 const App = () =>
-  <div>react-app-boilerplate</div>
+  <div className="App">
+    react-app-boilerplate
+  </div>
 
 export default App

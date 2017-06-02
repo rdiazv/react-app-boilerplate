@@ -1,0 +1,6 @@
+@import 'theme/variables';
+
+html,
+body {
+  font-size: $font-size;
+}
