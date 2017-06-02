@@ -5,5 +5,14 @@
       "modules": false
     }],
     "stage-0"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "react",
+        "es2015",
+        "stage-0"
+      ]
+    }
+  }
 }
