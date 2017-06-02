@@ -8,6 +8,7 @@ module.exports = new Config().merge({
   },
   output: {
     path: path.resolve('dist'),
+    publicPath: '/',
     filename: '[name].js',
   },
   plugins: [
