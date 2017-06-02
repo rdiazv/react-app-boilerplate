@@ -1,0 +1,9 @@
+{
+  "name": "react-app-boilerplate",
+  "version": "1.0.0",
+  "description": "A react app boilerplate.",
+  "main": "index.js",
+  "repository": "git@github.com:rdiazv/react-app-boilerplate.git",
+  "author": "Rodrigo Andrés Díaz Vergara <rdiazv89@gmail.com>",
+  "license": "MIT"
+}
