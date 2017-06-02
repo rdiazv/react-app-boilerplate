@@ -25,6 +25,7 @@
     "html-webpack-plugin": "2.28.0",
     "jest": "20.0.4",
     "jest-directory-named-resolver": "jsonnull/jest-directory-named-resolver",
+    "jest-enzyme": "3.2.0",
     "react-test-renderer": "15.5.4",
     "webpack": "2.6.1",
     "webpack-config": "7.0.0",
@@ -53,6 +54,7 @@
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
   }
 }
