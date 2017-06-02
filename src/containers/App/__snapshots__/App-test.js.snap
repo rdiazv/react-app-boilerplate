@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render 1`] = `
+<App>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": undefined,
+            "pathname": "blank",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div
+        className="App"
+      >
+        <h1
+          className="App__title"
+        >
+          react-app-boilerplate
+        </h1>
+        <div
+          className="App__navigation"
+        >
+          <NavLink
+            activeClassName="active"
+            exact={true}
+            to="/"
+          >
+            <Route
+              exact={true}
+              path="/"
+            >
+              <Link
+                replace={false}
+                to="/"
+              >
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Home
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            to="/about"
+          >
+            <Route
+              path="/about"
+            >
+              <Link
+                replace={false}
+                to="/about"
+              >
+                <a
+                  href="/about"
+                  onClick={[Function]}
+                >
+                  About
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </div>
+        <div
+          className="App__contents"
+        >
+          <Switch />
+        </div>
+      </div>
+    </Router>
+  </BrowserRouter>
+</App>
+`;

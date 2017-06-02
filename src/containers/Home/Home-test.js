@@ -1,9 +1,9 @@
 import { React, mount } from 'helpers/test-helper'
-import App from 'components/App'
+import Home from 'containers/Home'
 
-describe('App', () => {
+describe('Home', () => {
   it('should render', () => {
-    const component = mount(<App />)
+    const component = mount(<Home />)
 
     expect(component).toMatchSnapshot()
   })

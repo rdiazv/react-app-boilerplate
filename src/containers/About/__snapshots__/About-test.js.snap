@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About should render 1`] = `
+<About>
+  <div>
+    <h1>
+      About
+    </h1>
+    <Link
+      replace={false}
+      to="/"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Back to home
+      </a>
+    </Link>
+  </div>
+</About>
+`;

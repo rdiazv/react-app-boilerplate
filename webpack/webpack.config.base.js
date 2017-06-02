@@ -8,14 +8,17 @@ var Dotenv = require('dotenv-webpack')
 module.exports = new Config().merge({
   entry: {
     app: [
-      'whatwg-fetch',
       path.resolve('src/lib/promise.js'),
       path.resolve('src/theme/entry.css'),
       path.resolve('src/entry.js'),
     ],
     vendors: [
+      'deep-assign',
+      'promise-polyfill',
+      'prop-types',
       'react',
       'react-dom',
+      'react-router-dom',
       'whatwg-fetch',
     ],
   },
