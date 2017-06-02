@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 var Config = require('webpack-config').default
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
@@ -8,6 +9,10 @@ module.exports = new Config().merge({
     app: [
       path.resolve('src/theme/entry.css'),
       path.resolve('src/entry.js'),
+    ],
+    vendors: [
+      'react',
+      'react-dom',
     ],
   },
   output: {
@@ -40,6 +45,14 @@ module.exports = new Config().merge({
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.html'),
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['vendors'],
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['runtime'],
+    }),
+    new webpack.NamedChunksPlugin(),
+    new webpack.NamedModulesPlugin(),
   ],
   node: {
     fs: 'empty',
