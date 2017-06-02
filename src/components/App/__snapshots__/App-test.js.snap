@@ -2,7 +2,9 @@
 
 exports[`App should render 1`] = `
 <App>
-  <div>
+  <div
+    className="App"
+  >
     react-app-boilerplate
   </div>
 </App>

@@ -32,6 +32,7 @@
     "express-static-gzip": "0.2.2",
     "extract-text-webpack-plugin": "2.1.0",
     "html-webpack-plugin": "2.28.0",
+    "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
     "jest-directory-named-resolver": "jsonnull/jest-directory-named-resolver",
     "jest-enzyme": "3.2.0",
@@ -74,6 +75,9 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    }
   }
 }
