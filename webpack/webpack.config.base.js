@@ -11,6 +11,15 @@ module.exports = new Config().merge({
     publicPath: '/',
     filename: '[name].js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: path.resolve('src'),
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.html'),
