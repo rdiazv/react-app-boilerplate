@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "git@github.com:rdiazv/react-app-boilerplate.git",
   "author": "Rodrigo Andrés Díaz Vergara <rdiazv89@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.js"
+  },
+  "devDependencies": {
+    "webpack": "2.6.1"
+  }
 }
