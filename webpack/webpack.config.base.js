@@ -1,6 +1,7 @@
 var path = require('path')
 var Config = require('webpack-config').default
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 
 module.exports = new Config().merge({
   entry: {
@@ -20,9 +21,25 @@ module.exports = new Config().merge({
       },
     ],
   },
+  resolve: {
+    modules: [
+      path.resolve('src'),
+      path.resolve('node_modules'),
+    ],
+    plugins: [
+      new DirectoryNamedWebpackPlugin({
+        honorIndex: true,
+        honorPackage: true,
+      }),
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.html'),
     }),
   ],
+  node: {
+    fs: 'empty',
+    net: 'empty',
+  },
 })

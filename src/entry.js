@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-const App = () =>
-  <div>react-app-boilerplate</div>
+import App from 'components/App'
 
 ReactDOM.render(
   <App />,
