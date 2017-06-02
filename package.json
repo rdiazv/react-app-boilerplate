@@ -81,5 +81,8 @@
     "moduleNameMapper": {
       "\\.css$": "identity-obj-proxy"
     }
+  },
+  "engines": {
+    "node": "6.x"
   }
 }
