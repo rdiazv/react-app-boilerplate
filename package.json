@@ -11,6 +11,7 @@
     "dev": "NODE_ENV=development webpack --config webpack/webpack.config.js --watch"
   },
   "devDependencies": {
+    "html-webpack-plugin": "2.28.0",
     "webpack": "2.6.1",
     "webpack-config": "7.0.0"
   }
