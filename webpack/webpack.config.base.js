@@ -7,12 +7,15 @@ var DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 module.exports = new Config().merge({
   entry: {
     app: [
+      'whatwg-fetch',
+      path.resolve('src/lib/promise.js'),
       path.resolve('src/theme/entry.css'),
       path.resolve('src/entry.js'),
     ],
     vendors: [
       'react',
       'react-dom',
+      'whatwg-fetch',
     ],
   },
   output: {
