@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lazy if not state.loading and not state.component should render nothing 1`] = `
+<Lazy
+  getComponent={[Function]}
+  loadingComponent={null}
+/>
+`;
+
+exports[`Lazy if not state.loading and state.component should render state.component passing all extra props 1`] = `
+<Lazy
+  extra1="someExtraProp1"
+  extra2="someExtraProp2"
+  getComponent={[Function]}
+  loadingComponent={null}
+>
+  <SomeComponent
+    extra1="someExtraProp1"
+    extra2="someExtraProp2"
+  >
+    <div />
+  </SomeComponent>
+</Lazy>
+`;
+
+exports[`Lazy if state.loading should render props.loadingComponent 1`] = `
+<Lazy
+  getComponent={[Function]}
+  loadingComponent={
+    <div>
+      LOADING
+    </div>
+  }
+>
+  <div>
+    LOADING
+  </div>
+</Lazy>
+`;
