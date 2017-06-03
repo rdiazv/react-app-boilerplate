@@ -39,6 +39,7 @@ module.exports = new Config().merge({
   resolve: {
     modules: [
       path.resolve('src'),
+      path.resolve('tests'),
       path.resolve('node_modules'),
     ],
     plugins: [

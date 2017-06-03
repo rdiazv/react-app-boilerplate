@@ -1,0 +1,47 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/webpack.config.development.js"
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "import/no-extraneous-dependencies": [2, {
+      "devDependencies": [
+        "**/*-test.js",
+        "tests/**/*.js"
+      ]
+    }],
+    "import/no-named-as-default": [0],
+    "react/jsx-closing-bracket-location": [2, { "nonEmpty": "props-aligned", "selfClosing": "tag-aligned" }],
+    "react/jsx-filename-extension": [2, { "extensions": [".js"] }],
+    "react/jsx-sort-props": [2],
+    "react/jsx-wrap-multilines": [2, {
+      "declaration": true,
+      "assignment": true,
+      "return": true,
+      "arrow": false
+    }],
+    "react/prefer-stateless-function": [0],
+    "react/sort-prop-types": [2],
+    "semi": [2, "never"]
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom'
+import { BrowserRouter, NavLink, Switch } from 'react-router-dom'
 import LazyRoute from 'components/LazyRoute'
 import './App.css'
 

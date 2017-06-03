@@ -1,4 +1,4 @@
-import { React, mount } from 'helpers/test-helper'
+import { React, mount } from 'helpers/test-helper'
 import Home from 'containers/Home'
 
 describe('Home', () => {

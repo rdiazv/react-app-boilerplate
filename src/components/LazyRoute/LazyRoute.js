@@ -9,7 +9,7 @@ export default class LazyRoute extends PureComponent {
   }
 
   render() {
-    const { getComponent, ...other } = this.props
+    const { getComponent, ...other } = this.props
 
     return (
       <Route

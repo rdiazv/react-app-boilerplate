@@ -19,7 +19,7 @@ export const createRouter = options => {
     route: {
       location: history.location,
       match: computeMatch(history.location.pathname),
-    }
+    },
   }
 }
 
