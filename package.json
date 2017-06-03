@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.js -p",
-    "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack.config.js --hot",
+    "dev": "NODE_ENV=development webpack-dashboard --color -- webpack-dev-server --config webpack/webpack.config.js --hot",
     "lint": "eslint --color --ext .js src tests",
     "profile": "NODE_ENV=production webpack --config webpack/webpack.config.js -p --profile --json > webpack.stats.json",
     "start": "node server.js",
@@ -61,6 +61,7 @@
     "style-loader": "0.18.1",
     "webpack": "2.6.1",
     "webpack-config": "7.0.0",
+    "webpack-dashboard": "0.4.0",
     "webpack-dev-server": "2.4.5"
   },
   "dependencies": {

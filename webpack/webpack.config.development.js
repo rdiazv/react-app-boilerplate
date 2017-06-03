@@ -1,5 +1,6 @@
 var Config = require('webpack-config').default
 var path = require('path')
+var DashboardPlugin = require('webpack-dashboard/plugin')
 var PORT = process.env.PORT || 8080
 
 module.exports = new Config().extend(path.resolve('webpack/webpack.config.base.js')).merge({
@@ -35,4 +36,7 @@ module.exports = new Config().extend(path.resolve('webpack/webpack.config.base.j
       errors: true,
     },
   },
+  plugins: [
+    new DashboardPlugin(),
+  ],
 })
