@@ -3,12 +3,12 @@ import LazyRoute from 'components/LazyRoute'
 
 describe('LazyRoute', () => {
   it('should render', () => {
-    const component = mount(
-      <LazyRoute
-        getComponent={() => new Promise(() => {})}
-      />
-    )
-
-    expect(component).toMatchSnapshot()
+    expect(() =>
+      mount(
+        <LazyRoute
+          getComponent={() => new Promise(() => {})}
+        />
+      )
+    ).not.toThrow()
   })
 })

@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom'
-import Home from 'containers/Home'
-import About from 'containers/About'
+import LazyRoute from 'components/LazyRoute'
 import './App.css'
 
 const App = () =>
@@ -16,14 +15,18 @@ const App = () =>
 
       <div className="App__contents">
         <Switch>
-          <Route
-            component={Home}
+          <LazyRoute
             exact
             path="/"
+            getComponent={() =>
+              import('containers/Home' /* webpackChunkName: "Home" */)
+            }
           />
-          <Route
-            component={About}
+          <LazyRoute
             path="/about"
+            getComponent={() =>
+              import('containers/About' /* webpackChunkName: "About" */)
+            }
           />
         </Switch>
       </div>
