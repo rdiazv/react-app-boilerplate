@@ -7,6 +7,12 @@ module.exports = new Config().extend(path.resolve('webpack/webpack.config.base.j
   module: {
     rules: [
       {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
